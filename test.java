@@ -1,6 +1,33 @@
-//basic code
-public class test {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+import javax.swing.*;
+
+class demo{
+    public static void main(String[] args){
+        JFrame frame = new JFrame("Test Demo");
+        frame.setSize(700, 500);
+        frame.setLocationRelativeTo(null);
+
+        JMenuBar menuBar = new JMenuBar();
+
+        //file menu with open and save options
+        JMenu filename = new JMenu("File");
+        JMenuItem open = new JMenuItem("Open");
+        JMenuItem save = new JMenuItem("Save");
+        filename.add(open);
+        filename.add(save);
+        menuBar.add(filename);
+
+        //edit menu with cut, copy and paste options
+        JMenu edit = new JMenu("Edit");
+        JMenuItem cut = new JMenuItem("Cut");
+        JMenuItem copy = new JMenuItem("Copy");
+
+        edit.add(cut);
+        edit.add(copy);
+
+        menuBar.add(edit);
+
+
+        frame.setJMenuBar(menuBar);
+        frame.setVisible(true);
     }
 }
